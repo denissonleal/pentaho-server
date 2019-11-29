@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   pentaho:
     container_name: pentaho
@@ -6,7 +6,8 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - ./pentaho-hsqldb-data:/opt/pentaho/server/pentaho-server/data/hsqldb
+      - ./data/hsqldb:/opt/pentaho/server/pentaho-server/data/hsqldb
+      - ./data/repository:/opt/pentaho/server/pentaho-server/pentaho-solutions/system/jackrabbit/repository
     entrypoint:
       - sh
       - 'entrypoint.sh'

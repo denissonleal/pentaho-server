@@ -1,0 +1,10 @@
+*
+!.gitignore
+!hibernate.properties
+!hibernate.script
+!migration.sql
+!quartz.properties
+!quartz.script
+!sampledata.properties
+!sampledata.script
+
