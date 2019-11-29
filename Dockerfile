@@ -31,6 +31,7 @@ RUN wget http://downloads.meteorite.bi/saiku3/saiku-plugin-p7.1-3.90.zip -O tmp-
 	rm -r tmp-saiku.zip tmp-saiku
 
 COPY license/license.lic $PENTAHO_SERVER/pentaho-solutions/system/saiku/
+COPY entrypoint.sh entrypoint.sh
 
 EXPOSE 8080
-ENTRYPOINT ["sh", "-c", "$PENTAHO_SERVER/start-pentaho.sh && sleep 60 && tail -f $PENTAHO_SERVER/tomcat/logs/*.log"]
+#ENTRYPOINT ["sh", "-c", "$PENTAHO_SERVER/start-pentaho.sh && sleep 60 && tail -f $PENTAHO_SERVER/tomcat/logs/*.log"]

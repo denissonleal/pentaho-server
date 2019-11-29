@@ -1,0 +1,16 @@
+version: '2'
+services:
+  pentaho:
+    container_name: pentaho
+    build: .
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./pentaho-hsqldb-data:/opt/pentaho/server/pentaho-server/data/hsqldb
+    entrypoint:
+      - sh
+      - 'entrypoint.sh'
+
+# # Data volumes
+# volumes:
+#   pentaho-hsqldb-data:
